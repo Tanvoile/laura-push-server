@@ -6,8 +6,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const publicKey = "BOpDFQyoWxny8Iyi2jWZqM-jDOVWBJcpOmMG4OJ3q_Uk5EHTYAYT6zNH5sWhydqUXZYoMZyRPFyGHyeA-3fVJ4U";
-const privateKey = "0LCHz_h1nsACxQHY8ZlYcvx4Mcn1VYVZlb8HQQzLO38"; // Mets ta vraie clé privée ici
+const publicKey = process.env.VAPID_PUBLIC_KEY;
+const privateKey = process.env.VAPID_PRIVATE_KEY;
 
 webpush.setVapidDetails(
   "mailto:laura@push.com",
