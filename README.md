@@ -5,7 +5,7 @@ Il utilise `express`, `web-push`, et peut être déployé gratuitement sur Rende
 
 ## Endpoints
 
-- `POST /subscribe` — enregistre un nouvel abonné push
+- `POST /subscribe` — enregistre un nouvel abonné push 
 - `POST /send` — envoie une notification à tous les abonnés
 
 ## Lancer en local
