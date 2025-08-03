@@ -57,9 +57,9 @@ app.get("/send", (req, res) => {
     icon: "/icon.png"
   });
 
-  const sendPromises = subscriptions.map(sub =>
+  const sendPromises = subscribers.map(sub =>
     webpush.sendNotification(sub, notificationPayload).catch(err => console.error(err))
-);
+  );
 
   Promise.all(sendPromises)
     .then(() => res.status(200).send("Notifications envoyées !"))
